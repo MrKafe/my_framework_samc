@@ -1,0 +1,21 @@
+.text {
+  @each $theme in $theme-colors {
+    $name: nth($theme, 1);
+    $value: nth($theme, 2);
+
+    &-#{$name} {
+      color: $value;
+    }
+  }
+}
+
+.bg {
+  @each $theme in $theme-colors {
+    $name: nth($theme, 1);
+    $value: nth($theme, 2);
+
+    &-#{$name} {
+      background-color: $value;
+    }
+  }
+}

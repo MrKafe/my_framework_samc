@@ -1,0 +1,60 @@
+.btn {
+  display: inline-block;
+  font-weight: bold;
+  color: #212529;
+  text-align: center;
+  vertical-align: middle;
+  user-select: none;
+  border: 1px solid;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  margin: 5px;
+  border-radius: 0.25rem;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+
+  &:active{
+    box-shadow: 0 0 5px 2px black inset;
+  }
+
+  &-contained{
+    width: 100%;
+  }
+
+  @each $color in $all-colors {
+    $name: nth($color, 1);
+    $value: nth($color, 2);
+
+    &-#{$name} {
+      background-color: $value;
+    }
+  }
+}
+
+.btn:hover:not(:active){
+  box-shadow: 0 0 5px 2px black;
+}
+
+.btn[disabled] {
+  filter: blur(2px);
+  //cursor: not-allowed;
+  pointer-events: none;
+}
+
+//@each $color in $all-colors {
+//  $name: nth($color, 1);
+//  $value: nth($color, 2);
+//
+//  .btn-#{$name} {
+//    background-color: $value;
+//  }
+//}
+
+@each $width in $btnWidth {
+  $name: nth($width, 1);
+  $value: nth($width, 2);
+
+  .btn-#{$name} {
+    width: $value;
+  }
+}

@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./scss/reset.css">
+    <link rel="stylesheet" href="./main.css">
+    <script src="./script.js"></script>
+    <title>MyTest</title>
+</head>
+<body>
+<!-- NAVBAR -->
+    <div class="navbar bg-muted">
+        <span class="navbar-brand">Hello world</span>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="navbar-collapse">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Accueil (active)</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Link 2</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink">
+                        Dropdown
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <li class="dropdown-item"><a class="nav-link" href="#">Down 1</a></li>
+                        <li class="dropdown-item"><a class="nav-link" href="#">Down Down 2</a></li>
+                        <li class="dropdown-item"><a class="nav-link" href="#">Down Down Down 3</a></li>
+                    </ul>
+                    <!-- <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" href="#">Down 1</a>
+                        <a class="dropdown-item" href="#">Down Down 2</a>
+                        <a class="dropdown-item" href="#">Down Down Down3</a>
+                    </div> -->
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled" href="#">Disabled</a>
+                </li>
+            </ul>
+            <form class="form-inline">
+                <input class="form-control" type="search" placeholder="Search">
+                <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+            <span class="navbar-text">
+                Hello world!
+            </span>
+        </div>
+    </div>
+    
+<!-- TABS -->
+    <ul class="nav nav-tabs">
+        <li class="active" data-target="#home"><a href="#tab1info">Info 1</a></li>
+        <li data-target="#profile"><a href="#">Info 2</a></li>
+        <li data-target="#contact"><a href="#">Info 3</a></li>
+        <li class="dropdown">
+            <a href="#" data-toggle="dropdown">Dropdown <span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+                <li><a href="#tab4info" data-toggle="tab">Info 4</a></li>
+                <li><a href="#tab5info" data-toggle="tab">Info 5</a></li>
+            </ul>
+        </li>
+    </ul>
+
+    <div class="tab-content" id="myTabContent">
+        <div class="tab-pane" id="home" role="tabpanel" aria-labelledby="home-tab">Text in tab1</div>
+        <div class="tab-pane" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+            <ul class="nav nav-tabs">
+                <li class="active" data-target="#accueil"><a href="#">Sous Info 1</a></li>
+                <li data-target="#menu"><a href="#">Sous Info 2</a></li>
+                <li data-target="#param"><a href="#">Sous Info 3</a></li>
+            </ul>
+            <div class="tab-pane" id="accueil" role="tabpanel" aria-labelledby="contact-tab">Text in tab2.1</div>
+            <div class="tab-pane" id="menu" role="tabpanel" aria-labelledby="contact-tab">Text in tab2.2</div>
+            <div class="tab-pane" id="param" role="tabpanel" aria-labelledby="contact-tab">Text in tab2.3</div>
+        </div>
+        <div class="tab-pane" id="contact" role="tabpanel" aria-labelledby="contact-tab">Text in tab3</div>
+    </div>
+    
+<!-- MODALS -->
+    <!-- modal 1 -->
+    <div class="modal" id="MyModal">
+        <div class="modal-sandbox" data-target="#MyModal"></div>
+        <div class="modal-box">
+            <div class="modal-header">
+                <div class="close-modal popin-dismiss" data-target="#MyModal">&#10006;</div>
+                <h1>ONONON</h1>
+            </div>
+            <div class="modal-body">
+                <p>JADORE LE NON</p>
+                <button data-target="#MyModal" class="popin-dismiss">Close!</button>
+            </div>
+        </div>
+    </div>
+    <!-- modal 2 -->
+    <div class="modal" id="monmodal">
+        <div class="modal-sandbox" data-target="#monmodal"></div>
+        <div class="modal-box">
+            <div class="modal-header">
+                <div class="close-modal popin-dismiss" data-target="#monmodal">&#10006;</div>
+                <h1>OUIOUI</h1>
+            </div>
+            <div class="modal-body">
+                <p>JADORE LE OUI</p>
+                <button data-target="#monmodal" class="popin-dismiss">Close!</button>
+            </div>
+        </div>
+    </div>
+    <!-- modal 3 - grid -->
+    <div class="modal" id="modalGrid">
+        <div class="modal-sandbox" data-target="#modalGrid"></div>
+        <div class="modal-box">
+            <div class="modal-header">
+                <div class="close-modal popin-dismiss" data-target="#modalGrid">&#10006;</div>
+                <h1>Grid</h1>
+            </div>
+            <div class="modal-body">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-4" style="background-color: red">.col-4 in modal</div>
+                        <div class="col-4" style="background-color: blue">.col-4 in modal</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="btn-modal btn btn-light-green btn-width-3" data-target="#MyModal">Modal 1</div>
+    <div class="btn-modal btn btn-dark-purple btn-width-3" data-target="#monmodal">Modal 2</div>
+    <div class="btn-modal btn btn-dark-green btn-width-3" data-target="#modalGrid">Modal 3 - grid</div>
+
+
+
+    <div class="row">
+        <div class="col-6" style="background-color: blue">.col-6 | hors container | in row</div>
+        <div class="col-6" style="background-color: orange">.col-6 | hors container | in row</div>
+    </div>
+    <div class="container-fluid">
+        <p>Container-fluid start</p>
+        <div class="col-4" style="background-color: red; height: 100px">.col-4 | hors row</div>
+        <div class="col-8" style="background-color: green; height: 100px">.col-8 | hors row</div>
+        <div class="row hidden-screen-1">
+            <div class="col-6" style="background-color: red">.col-6 | in row | hidden-screen-1</div>
+            <div class="col-6" style="background-color: green">.col-6 | in row | hidden-screen-1</div>
+        </div>
+        <div class="row hidden-screen-2">
+            <div class="col-5" style="background-color: red">.col-5 | in row | hidden-screen-2</div>
+            <div class="col-7" style="background-color: green">.col-7 | in row | hidden-screen-2</div>
+        </div>
+        <div class='row hidden-screen-3'>
+            <div class="btn btn-light-blue btn-width-3">Bouton visible</div>
+            <div class="btn btn-dark-green btn-width-3" disabled>Bouton disabled</div>
+            <div class="btn btn-light-red" data-toggle="tooltip" data-placement="top" title="Tooltip on top top" data-original-title="Tooltip on top">Tooltips</div>
+        </div>
+        <p>Image responsive</p>
+        <img src="/home/alex/Images/Wallpaper_RobinsHood.jpg" class="img-responsive">
+        <p>Image responsive | .img-rounded-5</p>
+        <img src="/home/alex/Images/black-smoke.jpg" class=" img-responsive img-rounded-5">
+        <div class='text-error bg-success'>Text changes | .text-error | .bg-success</div>
+        <div>
+            <p>Image circle</p>
+            <img class="img-circle" src="https://picsum.photos/720/720?random&v=1">
+        </div>
+        <div>
+            <div class="alert">alert standard</div>
+            <div class="alert alert-success">alert SUCCESS</div>
+            <div class="alert alert-info">alert INFO</div>
+            <div class="alert alert-warning">alert WARNING</div>
+            <div class="alert alert-danger">alert DANGER</div>
+        </div>
+        <div>
+            <p>Thumbnail 1-5</p>
+            <img class="img-thumbnail-1" src="https://picsum.photos/1080/720?random&v=1">
+            <img class="img-thumbnail-2" src="https://picsum.photos/1080/720?random&v=2">
+            <img class="img-thumbnail-3" src="https://picsum.photos/1080/720?random&v=3">
+            <img class="img-thumbnail-4" src="https://picsum.photos/1080/720?random&v=4">
+            <img class="img-thumbnail-5" src="https://picsum.photos/1080/720?random&v=5">
+        </div>
+        
+    </div>
+</body>
+</html>

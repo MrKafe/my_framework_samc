@@ -1,0 +1,32 @@
+$i: 1;
+
+@each $media in $screen-size {
+  $maxW: nth($media, 1);
+
+  @media screen and (max-width: $maxW+px) {
+    .visible-screen-#{$i} {
+      /*visibility: visible;*/
+      display: unset;
+    }
+    .hidden-screen-#{$i} {
+      /*visibility: hidden;*/
+      display: none;
+    }
+  }
+  $i: $i + 1;
+}
+
+@media screen {
+  .visible-print {
+    display: none;
+  }
+}
+
+@media print {
+  .visible-print {
+    display: unset;
+  }
+  .hidden-print {
+    display: none;
+  }
+}

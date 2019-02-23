@@ -1,0 +1,30 @@
+@function calculate($i, $mul) {
+  @return $i * $mul;
+}
+
+.img-responsive {
+  width: inherit;
+}
+
+@for $i from 1 through 5{
+  .img-rounded-#{$i} {
+    border-radius: calculate($i, 10)+px;
+  }
+}
+
+.img-circle {
+  border-radius: 50%;
+}
+
+@for $i from 1 through 5{
+  .img-thumbnail-#{$i} {
+    width: calculate($i, 100)+px;
+    height: calculate($i, 100)+px;
+  }
+}
+
+@for $i from 1 through 5{
+  .img-blur-#{$i} {
+    filter: blur($i+px);
+  }
+}

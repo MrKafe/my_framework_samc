@@ -1,0 +1,11 @@
+$btn-width-1: 100px;
+$btn-width-2: 200px;
+$btn-width-3: 300px;
+$btn-width-4: 400px;
+
+$btnWidth: (
+  'width-1': $btn-width-1,
+  'width-2': $btn-width-2,
+  'width-3': $btn-width-3,
+  'width-4': $btn-width-4,
+);

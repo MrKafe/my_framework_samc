@@ -1,0 +1,37 @@
+$color-light-red: #fc5c65;
+$color-dark-red: #eb3b5a;
+$color-light-orange: #fd9644;
+$color-dark-orange: #fa8231;
+$color-light-green: #26de81;
+$color-dark-green: #20bf6b;
+$color-light-blue: #45aaf2;
+$color-dark-blue: #2d98da;
+$color-light-purple: #a55eea;
+$color-dark-purple: #8854d0;
+$color-light-grey: #a5b1c2;
+$color-dark-grey: #778ca3;
+
+
+$all-colors: (
+  light-red: $color-light-red,
+  dark-red: $color-dark-red,
+  light-orange: $color-light-orange,
+  dark-orange: $color-dark-orange,
+  light-green: $color-light-green,
+  dark-green: $color-dark-green,
+  light-blue: $color-light-blue,
+  dark-blue: $color-dark-blue,
+  light-purple: $color-light-purple,
+  dark-purple: $color-dark-purple,
+  light-grey: $color-light-grey,
+  dark-grey: $color-dark-grey,
+);
+
+$theme-colors: (
+  muted: map_get($all-colors, light-grey),
+  primary: map_get($all-colors, light-blue),
+  success: map_get($all-colors, dark-green),
+  info: map_get($all-colors, light-orange),
+  warning: map_get($all-colors, light-red),
+  error: map_get($all-colors, dark-red),
+);
